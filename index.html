@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Game-A-Lot Registration</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Game-A-Lot!</div>
+        <nav>
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Welcome to Game-A-Lot!</h2>
+        <p>
+            Game-A-Lot is your ultimate gaming destination where you can experience
+            the thrill of gaming with top-notch facilities. Play a variety of games
+            on high-performance devices, enjoy a fast and reliable internet
+            connection, and immerse yourself in the gaming world. Register now and
+            become a part of the gaming community at Game-A-Lot!
+        </p>
+        <p>
+            Our mission is to create an inclusive gaming environment, offering
+            top-notch facilities and fostering a dynamic community. We envision
+            Game-A-Lot as the go-to destination for gamers, celebrating passion and
+            camaraderie.
+        </p>
+        <p>
+            Game-A-Lot is not just a gaming hub; we are passionate about esports.
+            Our commitment extends to organizing and hosting thrilling esports
+            tournaments. From competitive esports leagues to casual gaming events,
+            we bring together players for unforgettable experiences.
+        </p>
+        <p>
+            Game-A-Lot also offers membership programs with exclusive benefits,
+            including priority access, special discounts, and member-only events.
+        </p>
+        <form id="registrationForm" onsubmit="validateForm(event)">
+            <h2>Registration Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <div id="nameError" class="error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="phone" required />
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required />
+
+            <label for="City">Select City:</label>
+            <select multiple name="city" id="city" required>
+                <option value="vadodara">Vadodara</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="patna">Patna</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="goa">Goa</option>
+                <option value="chennai">Chennai</option>
+                <option value="ahemdabad">Ahemdabad</option>
+                <option value="gandhinagar">Ghandhinagar</option>
+                <option value="newDelhi">New Delhi</option>
+                <option value="indore">Indore</option>
+                <option value="bhopal">Bhopal</option>
+                <option value="surat">Surat</option>
+                <option value="rajkot">Rajkot</option>
+                <option value="jaipur">Jaipur</option>
+                <option value="udaipur">Udaipur</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="bengaluru">Bangaluru</option>
+                <option value="ranchi">Ranchi</option>
+                <option value="pune">Pune</option>
+                <option value="lucknow">Lucknow</option>
+                <option value="chandigarh">Chandigarh</option>
+                <option value="nagpur">Nagpur</option>
+                <option value="agra">Agra</option>
+                <option value="kanpur">Kanpur</option>
+                <option value="meerut">Meerut</option>
+                <option value="ghaziabad">Ghaziabad</option>
+                <option value="thane">Thane</option>
+                <option value="jamsedpur">Jamsedpur</option>
+                <option value="gwalior">Gwalior</option>
+                <option value="kota">Kota</option>
+                <option value="aligarh">Aligarh</option>
+                <option value="dhanbad">Dhanbad</option>
+                <option value="dehradun">Dehradun</option>
+                <option value="thiruvananthapuram">Thiruvananthapuram</option>
+            </select>
+
+            <label for="games">Select Games:</label>
+            <select multiple id="games" name="games" required>
+                <option value="battlegroundsMobileIndia">Battlegrounds Mobile India</option>
+                <option value="valorant">Valorant</option>
+                <option value="freeFire">Free Fire</option>
+                <option value="codMobile">Call of Duty Mobile</option>
+                <option value="codWarzone">Call of Duty Warzone</option>
+                <option value="csGo">Counter-Strike: Global Offensive (CS:GO)</option>
+                <option value="gtaViceCity">GTA Vice City</option>
+                <option value="gtaSanAndreas">GTA San Andreas</option>
+                <option value="gta3">GTA 3</option>
+                <option value="gta4">GTA 4</option>
+                <option value="gta5">GTA 5</option>
+                <option value="nfsMostWanted">Need for Speed: Most Wanted</option>
+                <option value="nfsHeat">Need for Speed: Heat</option>
+                <option value="pokemonGO">Pokemon GO</option>
+            </select>
+
+            <label for="duration">Duration (in hours):</label>
+            <input type="number" id="duration" name="duration" required />
+
+
+            <div class="amount-container">
+                <label>Amount to be Paid:</label>
+                <span id="amountToBePaid">₹0</span>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <table>
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>Price (INR)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Battlegrounds Mobile India</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Valorant</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Free Fire</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Call of Duty Mobile</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Call of Duty Warzone</td>
+                <td>220</td>
+            </tr>
+            <tr>
+                <td>Counter-Strike: Global Offensive (CS:GO)</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>GTA Vice City</td>
+                <td>60</td>
+            </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+            <tr>
+                <th>Game</th>
+                <th>Price (INR)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>GTA San Andreas</td>
+                <td>130</td>
+            </tr>
+            <tr>
+                <td>GTA 3</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>GTA 4</td>
+                <td>110</td>
+            </tr>
+            <tr>
+                <td>GTA 5</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Need for Speed: Most Wanted</td>
+                <td>140</td>
+            </tr>
+            <tr>
+                <td>Need for Speed: Heat</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Pokemon GO</td>
+                <td>40</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; Game-A-Lot. All rights reserved.</p>
+        <p>Darsh Parikh.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
